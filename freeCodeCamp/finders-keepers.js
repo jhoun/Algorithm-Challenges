@@ -9,9 +9,7 @@ findElement([1, 3, 5, 8, 9, 10], function(num){ return num % 2 === 0; });
 
 // Solution
 function findElement(arr, func) {
-  var finder = arr.filter((number) =>
-    func(number)
-  );
+  var finder = arr.filter(func);
   return finder[0];
 }
 
