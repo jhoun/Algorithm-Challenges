@@ -25,3 +25,13 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+
+// Solution 2
+function diffArray(arr1, arr2) {
+  var newArr = arr1.concat(arr2);
+  return newArr.filter(function(val){
+    return arr2.indexOf(val) === -1 || arr1.indexOf(val) === -1;
+  })
+}
+
+diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
